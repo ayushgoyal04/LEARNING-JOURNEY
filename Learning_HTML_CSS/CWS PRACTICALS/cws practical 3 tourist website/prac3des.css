@@ -1,0 +1,36 @@
+body{
+  background: linear-gradient(to right, skyblue, lightgreen);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+h1{
+  text-align: center;
+  color: red;
+}
+.img1{
+  
+  width: 600px;
+  height: 300px;
+}
+.p1{
+  float: right;
+  color:teal;
+ 
+  
+}
+.imggallary{
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+}
+a:link{
+
+  color:orange;
+  font-size: larger;
+  font-size: 30px;
+  
+}
+a:hover{
+  color: blue;
+}

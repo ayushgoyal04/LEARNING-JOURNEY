@@ -1,0 +1,267 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+
+<style>  
+body{  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: pink;  
+}  
+.container {  
+    padding: 50px;  
+  background-color: lightblue;  
+}  
+  
+input[type=text], input[type=password], input[type=email], textarea {  
+  width: 90%;  
+  padding: 15px;  
+  margin: 5px 0 22px 0;  
+  display: inline-block;  
+  border: none;  
+  background: #f1f1f1;  
+}  
+input[type=text]:focus, input[type=password]:focus {  
+  background-color: lavender;  
+  outline: none;  
+}  
+ div {  
+            padding: 10px 0;  
+         }  
+hr {  
+  border: 1px solid pink;  
+  margin-bottom: 25px;  
+}  
+.registerbtn {  
+  background-color: #4CAF50;  
+  color: white;  
+  padding: 16px 20px;  
+  margin: 8px 0;  
+  border: none;  
+  cursor: pointer;  
+  width: 100%;  
+  opacity: 0.9;  
+}  
+.registerbtn:hover {  
+  opacity: 1;  
+}  
+
+.deletebtn {  
+  background-color: #cf1a1a;  
+  color: white;  
+  padding: 16px 20px;  
+  margin: 8px 0;  
+  border: none;  
+  cursor: pointer;  
+  width: 100%;  
+  opacity: 0.9;  
+}  
+.deletebtn:hover {  
+  opacity: 1;  
+}  
+
+.savebtn {  
+  background-color: #4CAF50;  
+  color: white;  
+  padding: 16px 20px;  
+  margin: 8px 0;  
+  border: none;  
+  cursor: pointer;  
+  width: 20%;  
+  opacity: 0.9;  
+}  
+.savebtn:hover {  
+  opacity: 1;  
+} 
+
+.resetbtn {  
+  background-color: #813b46;  
+  color: white;  
+  padding: 16px 20px;  
+  margin: 8px 0;  
+  border: none;  
+  cursor: pointer;  
+  width: 20%;  
+  opacity: 0.9;  
+}  
+.resetbtn:hover {  
+  opacity: 1;  
+}
+
+</style>  
+</head>  
+<body>   <center><h1><strong>Welcome, Dear Alumni!<br></h1><h2><p>Reconnect with your college by filling this registration form!</p></strong></center></h2> 
+   
+<form>  
+  <div class="container">  
+  <center><h1>Alumni Registeration Form</h1> </center>  
+  <hr> 
+ 
+ 
+  <fieldset>
+    <legend><b><h2>Personal information</h2></legend></b> 
+ <b> <label> FirstName: </label> <br>  
+<input type="text" name="firstname" id="firstname" placeholder= "FirstName" size="15" required/>
+ <br>
+
+<label> MiddleName: </label> <br>
+<input type="text" name="middlename" id="middlename" placeholder="MiddleName" size="15" required/>   
+<br>
+<label> LastName: </label></b> <br>   
+<input type="text" name="lastname" id="lastname" placeholder="LastName" size="15"required/>
+
+
+<table width="100%">
+  <tr>
+    <td>
+      <label for=age><b>Your Age:</b></label>
+      <input type="number" name="age" id="age" min="18" max="90" step="1">
+    </td>
+    <td>
+      <label for="birthday"><b>Birthday:</b></label>
+      <input type="date" id="birthday" name="birthday">
+    </td>
+  </tr>
+</table>
+  <br>
+
+  <p>
+  <label for="gender"><b>Your Gender:</b></label>
+  <input type="radio" name="gender" id="male" value="male">
+  <label for="gender">Male</label>
+
+  <input type="radio" name="gender" id="Female" value="Female">
+  <label for="gender">Female</label>
+
+  <input type="radio" name="gender" id="other" value="other">
+  <label for="gender">Other</label>
+
+</p>
+
+
+    <button type="save" class="savebtn">save info</button>
+    <button type="reset" class="resetbtn">reset info</button>
+</fieldset>
+
+<br><br><br><br><br>
+
+<fieldset>
+  <legend>
+    <b><h2>Contact information</h2></b>
+  </legend>
+
+  <label for="phone">  <b> 
+    Phone Number :  
+    </label></b><br>
+    <input type="tel" name="phone" id="phone" placeholder="-91" size="20" required/>  
+    <br>
+<p>
+    <label for="email"><b>Enter your email:</b></label><br>
+<input type="email" id="email" name="email" placeholder="eMail" size="40">
+</p>
+
+    <p>
+      <label for="password"><b>Password:</b></label><br>
+      <input type="password" name="password" id="password" placeholder="it's a secret:)" required>
+    </p>
+
+    <p>
+     <b> Current Address : </b> 
+<textarea cols="80" rows="5" placeholder="Current Address" value="address" required>  
+</textarea>  <br>
+ <label for="email"><b>Email</b></label>  <br>
+ <input type="text" placeholder="Enter Email" name="email" required>  
+    </p>
+
+
+    <b> <label>Current City</label> <br>  
+      <input type="text" name="CurrentCity" id="CurrentCity" placeholder= "CurrentCity" size="15" required/>
+       <br>
+      
+      <label>Current State</label> <br>
+      <input type="text" name="CurrentState" id="CurrentState" placeholder="CurrentState" size="15" required/>   
+      <br>
+      
+      <label>Current country</label></b> <br>   
+      <input type="text" name="Currentcountry" id="Currentcountry" placeholder="Currentcountry" size="15"required/> <br>
+      
+      <label for="adresss"><b>Is current adress same as permanent adress?</b></label>
+<input type="radio" name="curentaddress" id="currentadress" value="currentadress">yes
+<input type="radio" name="curentaddress" id="currentadress" value="currentadress">no <br>
+<br><br><br>
+
+<button type="save" class="savebtn">save info</button>
+    <button type="reset" class="resetbtn">reset info</button>
+</fieldset>
+<br><br><br><br><br>
+
+<fieldset>
+  <legend>
+    <h2><b>Other information</b></h2>
+  </legend>
+  <div>
+    <label>   
+    <b>Enter Course :</b>  
+    </label>   
+      
+    <select>  
+    <option value="Course">Course</option>  
+    <option value="BCA">BCA</option>  
+    <option value="BBA">BBA</option>  
+    <option value="B.Tech">B.Tech</option>  
+    <option value="MBA">MBA</option>  
+    <option value="MCA">MCA</option>  
+    <option value="M.Tech">M.Tech</option>  
+    </select>  
+    </div><br>
+
+   <label><b>Enter academic year:</b></label><br>
+   <input type="number" name="acadyear" id="acadyear" placeholder="ex-2016-20020" size="15"required/> <br><br>
+
+   <p>
+    <b>How can you assist the college?</b> 
+<textarea cols="80" rows="5" id="assist" value="assist">  
+</textarea> </p> <br>
+
+<label for="job status"><b>Are you employed?</b></label>
+<input type="radio" name="jobstatus" id="jobstatus" value="jobstatus">yes
+<input type="radio" name="jobstatus" id="jobstatus" value="jobstatus">no <br>
+<br><br>
+
+<label><b>Current job:</b></label><br>
+   <input type="text" name="job" id="job" placeholder="job" size="15"> <br>
+
+   <p>
+    <b>Describe your job:</b> 
+<textarea cols="80" rows="5" id="assist" value="assist">  
+</textarea>  <br>
+
+<p>
+  <b>Interest (for planning further activities)</b> 
+<textarea cols="80" rows="5" id="interest" value="interest">  
+</textarea> </p> <br>
+
+<p>
+  <b>Fav moments/ best nostalgia moment:</b> 
+<textarea cols="80" rows="5" id="nostalgia" value="nostalgia">  
+</textarea> </p> <br>
+
+
+<label for="Meetup"><b>whether interested in an alumni meetup?</b></label>
+<input type="radio" name="Meetup" id="Meetup" value="Meetup">yes
+<input type="radio" name="Meetup" id="Meetup" value="Meetup">no <br>
+<br>
+
+<button type="save" class="savebtn">save info</button>
+    <button type="reset" class="resetbtn">reset info</button>
+   
+
+</fieldpost><hr color="black">
+ <br><br><br><br><br>
+   
+</form>  
+
+<button type="submit" class="registerbtn">Register</button>
+<button type="reset" class="deletebtn">delete all</button> 
+</body>  
+</html>

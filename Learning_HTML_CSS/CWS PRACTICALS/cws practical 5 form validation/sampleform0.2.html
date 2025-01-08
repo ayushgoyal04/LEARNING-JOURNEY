@@ -1,0 +1,188 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<style>  
+
+body{  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: pink;  
+}  
+
+.container {  
+    padding: 50px;  
+  background-color: lightblue;  
+}  
+  
+input[type=text], input[type=password], textarea {  
+  width: 100%;  
+  padding: 15px;  
+  margin: 5px 0 22px 0;  
+  display: inline-block;  
+  border: none;  
+  background: #f1f1f1;  
+}  
+
+input[type=text]:focus, input[type=password]:focus {  
+  background-color: orange;  
+  outline: none;  
+}  
+
+div {  
+            padding: 10px 0;  
+}  
+
+hr {  
+  border: 1px solid #f1f1f1;  
+  margin-bottom: 25px;  
+}  
+
+.registerbtn {  
+  background-color: #4CAF50;  
+  color: white;  
+  padding: 16px 20px;  
+  margin: 8px 0;  
+  border: none;  
+  cursor: pointer;  
+  width: 100%;  
+  opacity: 0.9;  
+}  
+
+.registerbtn:hover {  
+  opacity: 1;  
+}  
+</style>  
+</head>  
+
+<body>  
+<form>  
+  <div class="container">  
+  <center>  <h1>Registration Form</h1> </center>  
+  <hr>  
+
+<label> Name </label>   
+<input type="text" id="n1" name="firstname" placeholder="Name" required/> 
+ 
+<label for="">User Id</label>
+<input type="text" id="u1" name="userid" placeholder="user id" required>  
+
+<div>
+<label>   
+Course :  
+</label>   
+  
+<select required>  
+<option value="Course">Course</option>  
+<option value="BCA">BCA</option>  
+<option value="BBA">BBA</option>  
+<option value="B.Tech">B.Tech</option>' 
+<option value="MBA">MBA</option>  
+<option value="MCA">MCA</option>  
+<option value="M.Tech">M.Tech</option>  
+</select>  
+</div>  
+
+<div>  
+<label>   
+Gender :  
+</label><br>  
+<input type="radio" id="g1" value="Male" name="gender" checked > Male   
+<input type="radio" id="g1" value="Female" name="gender"> Female   
+<input type="radio" id="g1" value="Other" name="gender"> Other  
+</div> 
+
+<label>   
+Phone :  
+</label>  
+<input type="text" name="phone" id="ph1" required/>   
+
+Current Address :  
+<textarea cols="80" rows="5" id="ca1" placeholder="Current Address" value="address">  
+</textarea>  
+
+<label for="email"><b>Email</b></label>  
+<input type="text" id="e1" placeholder="Enter Email" name="email" required>  
+
+<label for="psw"><b>Password</b></label>  
+<input type="password" id="p1" placeholder="Enter Password" name="psw" required>  
+  
+<label for="psw-repeat"><b>Re-type Password</b></label>  
+<input type="password" id="p2" placeholder="Retype Password" name="psw-repeat" required>  
+    
+About :  
+<textarea cols="80" rows="5" id="a1" placeholder="About Yourself" value="address"> 
+</textarea>
+        
+<input type="submit" class="registerbtn" value="create" onClick="create_account()"/>
+</form>  
+
+<!--CODE FOR JAVASCRIPT-->
+
+<script type="text/javascript">  
+
+function create_account(){
+var n=document.getElementById("n1").value;
+var u=document.getElementById("u1").value;
+var ph=document.getElementById("ph1").value;
+var c=document.getElementById("ca1").value;
+var e=document.getElementById("e1").value;
+var p=document.getElementById("p1").value;
+var rp=document.getElementById("p2").value;
+var a=document.getElementById("a1").value;
+var g=document.getElementById("g1").value;
+
+//contitions//
+var name_val = /^[A-Za-z]{1,17}$/;
+
+var userid_val = /^[A-Za-z_0-999]{5,12}$/;
+
+var phone_val = /^[0-9]{10,12}$/;
+
+var email_val = /^[a-zA-Z_0-9999]{3,}@[a-zA-Z]{1,7}.[a-zA-z]{1,4}$/;
+
+if(n=='' || u=='' || ph=='' || e=='' || p=='' || rp=='')
+    {
+      alert("Fill all the required field");
+    }
+
+else if (!name_val.test(n))
+    {
+      alert("Enter name in correct format");
+    }
+
+else if (!userid_val.test(u))
+    {
+      alert("user id is incorrect and must contain maximum of 12 characters");
+    }
+else if (!phone_val.test(ph))
+    {
+      alert("enter phone number correctly");
+    }
+else if(!email_val.test(e))
+    {
+      alert("enter email in the correct format");
+    }
+else if (p!=rp)
+    {
+      alert("Passwords not matching");  
+    }
+else if(document.getElementById("g").checked==false)
+    {
+      alert("Plese select your gender");
+    }
+else if(p.value.length > 12)  
+    {  
+      alert("Password maximum length is 12");  
+    }  
+else if(p.value.length < 6)  
+    {  
+      alert("Password minimum length is 6");  
+    }
+else
+    {  
+      alert("Your account has been created successfully... ");  
+    }
+}
+</script>
+</body>  
+</html>
